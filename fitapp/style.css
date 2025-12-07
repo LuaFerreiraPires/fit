@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.active {
+  display: flex;
+}
+
+h1 {
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #1565c0;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+.back-btn {
+  background: none;
+  color: #1565c0;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ==== CARDS DE TREINOS ==== */
+#workout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.workout-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.workout-card h3 {
+  margin: 0 0 8px 0;
+  color: #1565c0;
+}
+
+.workout-info {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.start-btn {
+  background: #1565c0;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.start-btn:hover {
+  background: #0d47a1;
+}
+
+/* ==== DEMAIS TELAS ==== */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: black;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.timer {
+  font-size: 2rem;
+  background: #e3f2fd;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 10px 0;
+  color: #1565c0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  color: #1565c0;
+  cursor: pointer;
+  margin-top: 5px;
+}

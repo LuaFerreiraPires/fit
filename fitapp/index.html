@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treino em Casa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Tela de Login -->
+  <div id="login-screen" class="screen active">
+    <h1>💪 Treino em Casa</h1>
+    <p>Entre para começar seu treino</p>
+    <input type="email" id="email" placeholder="Digite seu e-mail" />
+    <input type="password" id="password" placeholder="Digite sua senha" />
+    <button onclick="login()">Entrar</button>
+    <p class="link" onclick="alert('Função de criar conta em breve!')">Criar conta</p>
+    <p class="link" onclick="alert('Função de recuperar senha em breve!')">Esqueci minha senha</p>
+  </div>
+
+  <!-- Landing Page -->
+  <div id="landing-screen" class="screen">
+    <h1>Bem-vindo ao seu treino!</h1>
+    <p>Selecione um treino e comece agora</p>
+    <button onclick="goToWorkouts()">Ver treinos</button>
+    <button class="back-btn" onclick="goBackToLogin()">Sair</button>
+  </div>
+
+  <!-- Lista de Treinos -->
+  <div id="workout-list-screen" class="screen">
+    <button class="back-btn" onclick="goBackToLanding()">← Voltar</button>
+    <h2>Treinos Disponíveis</h2>
+    <div id="workout-list"></div>
+  </div>
+
+  <!-- Tela de Exercício -->
+  <div id="workout-screen" class="screen">
+    <button class="back-btn" onclick="goBackToWorkouts()">← Sair do treino</button>
+    <h2 id="workout-title"></h2>
+    <p id="exercise-progress"></p>
+    <div class="video-container">
+      <iframe id="exercise-video" allowfullscreen></iframe>
+    </div>
+    <div class="timer" id="timer"></div>
+    <h3 id="exercise-name"></h3>
+    <p id="exercise-instructions"></p>
+    <div class="controls">
+      <button id="pause-btn" onclick="togglePause()">⏸ Pausar</button>
+      <button id="next-btn" onclick="nextExercise()">⏭ Próximo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
